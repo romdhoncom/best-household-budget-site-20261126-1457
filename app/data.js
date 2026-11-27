@@ -1,161 +1,99 @@
-// The recipes. Each has a slug (its address), a title, the minutes it takes, how many it serves, some tags, a short
-// introduction, its ingredients and its steps.
+// DompetKeluarga — seeded household data for November 2026.
+// All figures are realistic example figures for one Indonesian household
+// (a family of four in Bandung); every number on the site comes from here.
 
-export const recipes = [
-  {
-    slug: 'lemon-chickpea-pasta',
-    title: 'Lemon chickpea pasta',
-    minutes: 25,
-    serves: 4,
-    tags: ['vegetarian', 'pantry'],
-    intro: 'Crisp chickpeas, lemon and parsley tossed through short pasta. Most of it comes from the cupboard.',
-    ingredients: [
-      '400 g short pasta, such as orecchiette or shells',
-      '1 tin (400 g) chickpeas, drained and patted dry',
-      '4 tbsp olive oil',
-      '3 garlic cloves, sliced',
-      '1/2 tsp chilli flakes',
-      'Zest and juice of 1 lemon',
-      '40 g parmesan, finely grated',
-      'A handful of parsley, chopped',
-      'Salt and black pepper',
-    ],
-    steps: [
-      'Cook the pasta in well-salted boiling water until just tender. Keep a mugful of the cooking water, then drain.',
-      'While it cooks, fry the chickpeas in the oil over a medium-high heat for 8 to 10 minutes, until golden and crisp.',
-      'Add the garlic and chilli and cook for a minute more, until the garlic smells sweet but has not browned.',
-      'Tip in the pasta with the lemon zest, lemon juice, parmesan and a splash of the cooking water. Toss until glossy.',
-      'Season, stir through the parsley and serve straight away.',
-    ],
-  },
-  {
-    slug: 'sheet-pan-chicken',
-    title: 'Sheet-pan chicken with potatoes and green beans',
-    minutes: 50,
-    serves: 4,
-    tags: ['one tray', 'family'],
-    intro: 'Everything roasts on one tray, and the chicken fat crisps the potatoes underneath.',
-    ingredients: [
-      '8 bone-in chicken thighs, skin on',
-      '800 g small potatoes, halved',
-      '250 g green beans, trimmed',
-      '1 red onion, cut into wedges',
-      '3 tbsp olive oil',
-      '2 tsp smoked paprika',
-      '1 tsp dried oregano',
-      '1 lemon, quartered',
-      'Salt and black pepper',
-    ],
-    steps: [
-      'Heat the oven to 220 °C (200 °C fan).',
-      'Toss the potatoes and onion with 2 tbsp of the oil, salt and pepper on a large tray.',
-      'Rub the chicken with the rest of the oil, the paprika, oregano and salt, and sit it skin side up on the potatoes.',
-      'Roast for 30 minutes. Add the green beans and lemon around the chicken and roast for 12 to 15 minutes more.',
-      'Check the chicken is cooked through, squeeze the roasted lemon over everything and serve.',
-    ],
-  },
-  {
-    slug: 'black-bean-tacos',
-    title: 'Black bean tacos with quick pickled onions',
-    minutes: 30,
-    serves: 4,
-    tags: ['vegetarian', 'quick'],
-    intro: 'Smoky beans, a fast pink pickle and whatever crunchy things are in the fridge.',
-    ingredients: [
-      '1 red onion, thinly sliced',
-      '120 ml cider vinegar',
-      '1 tsp sugar',
-      '2 tins (400 g each) black beans, drained',
-      '1 tbsp olive oil',
-      '1 tsp ground cumin',
-      '1 tsp chipotle paste',
-      '12 small corn tortillas',
-      '1 avocado, sliced',
-      'Sour cream, lime wedges and coriander to serve',
-    ],
-    steps: [
-      'Put the onion in a jar with the vinegar, sugar and a big pinch of salt. Shake and leave for 20 minutes.',
-      'Warm the oil in a pan, add the cumin for 30 seconds, then the beans, chipotle and a splash of water.',
-      'Simmer for 5 minutes, crushing about half the beans with a fork.',
-      'Warm the tortillas in a dry pan for 30 seconds a side.',
-      'Fill with the beans, avocado, pickled onions, sour cream and coriander, and serve with lime.',
-    ],
-  },
-  {
-    slug: 'miso-salmon',
-    title: 'Miso salmon with rice and cucumber',
-    minutes: 25,
-    serves: 2,
-    tags: ['fish', 'quick'],
-    intro: 'A sweet, salty glaze that caramelises under the grill in under ten minutes.',
-    ingredients: [
-      '2 salmon fillets',
-      '1 tbsp white miso',
-      '1 tbsp honey',
-      '1 tsp soy sauce',
-      '1 tsp rice vinegar, plus 1 tbsp for the cucumber',
-      '150 g rice',
-      '1/2 cucumber, thinly sliced',
-      '1 spring onion, sliced',
-      '1 tsp sesame seeds',
-    ],
-    steps: [
-      'Rinse the rice and cook it with 300 ml water in a covered pan for 12 minutes, then rest it off the heat for 5.',
-      'Mix the miso, honey, soy sauce and 1 tsp vinegar, and spread it over the salmon.',
-      'Grill the salmon on a lined tray, close to a hot grill, for 7 to 9 minutes until glazed and just cooked.',
-      'Toss the cucumber with the rest of the vinegar and a pinch of salt.',
-      'Serve the salmon on the rice with the cucumber, spring onion and sesame seeds.',
-    ],
-  },
-  {
-    slug: 'tomato-egg-stir-fry',
-    title: 'Tomato and egg stir-fry',
-    minutes: 15,
-    serves: 2,
-    tags: ['vegetarian', 'quick'],
-    intro: 'Soft scrambled eggs in a sweet-sour tomato sauce. Serve it over plenty of rice.',
-    ingredients: [
-      '4 eggs',
-      '3 ripe tomatoes, cut into wedges',
-      '2 tbsp neutral oil',
-      '1 garlic clove, chopped',
-      '1 tbsp ketchup',
-      '1 tsp sugar',
-      '1 tsp soy sauce',
-      '2 spring onions, sliced',
-      'Cooked rice to serve',
-    ],
-    steps: [
-      'Beat the eggs with a pinch of salt.',
-      'Heat 1 tbsp oil in a wok until shimmering, pour in the eggs and stir gently until just set. Tip onto a plate.',
-      'Add the rest of the oil and the garlic, then the tomatoes. Cook for 3 minutes until they start to collapse.',
-      'Stir in the ketchup, sugar, soy sauce and 2 tbsp water, and simmer for a minute.',
-      'Return the eggs, fold through, scatter with spring onion and serve over rice.',
-    ],
-  },
-  {
-    slug: 'red-lentil-soup',
-    title: 'Red lentil soup',
-    minutes: 40,
-    serves: 6,
-    tags: ['vegan', 'freezes well'],
-    intro: 'A thick, golden soup with cumin and a squeeze of lemon. It keeps for days.',
-    ingredients: [
-      '2 tbsp olive oil',
-      '1 onion, chopped',
-      '2 carrots, chopped',
-      '2 garlic cloves, chopped',
-      '2 tsp ground cumin',
-      '1 tsp ground turmeric',
-      '300 g red lentils, rinsed',
-      '1.5 litres vegetable stock',
-      'Juice of 1 lemon',
-    ],
-    steps: [
-      'Soften the onion and carrots in the oil over a medium heat for 8 minutes.',
-      'Add the garlic, cumin and turmeric and stir for a minute.',
-      'Add the lentils and stock, bring to the boil and simmer for 20 minutes, until the lentils have fallen apart.',
-      'Blend until smooth, or leave it rough, and add the lemon juice and salt to taste.',
-    ],
-  },
+export const HOUSEHOLD = {
+  name: 'Keluarga Rahmawati',
+  members: 4,
+  city: 'Bandung',
+  month: 'November 2026',
+  currency: 'IDR',
+};
+
+export const INCOME = [
+  { source: 'Gaji — Andi (ayah)', amount: 8500000, note: 'Gaji pokok, diterima 1 Nov' },
+  { source: 'Gaji — Sari (ibu)', amount: 3200000, note: 'Gaji pokok, diterima 1 Nov' },
+  { source: 'Usaha sampingan — katering', amount: 1850000, note: 'Pesanan akhir pekan' },
+  { source: 'Bunga tabungan', amount: 42000, note: 'Bunga bulan Oktober' },
 ];
+
+export const CATEGORIES = [
+  { id: 'harian', name: 'Belanja Harian', color: '#2e7d5b', budget: 2800000 },
+  { id: 'tagihan', name: 'Tagihan & Utilitas', color: '#4a6fa5', budget: 1450000 },
+  { id: 'transport', name: 'Transportasi', color: '#b7791f', budget: 1200000 },
+  { id: 'makan', name: 'Makan di Luar', color: '#c0564f', budget: 900000 },
+  { id: 'pendidikan', name: 'Pendidikan', color: '#6b5ca5', budget: 1500000 },
+  { id: 'kesehatan', name: 'Kesehatan', color: '#2f8f83', budget: 600000 },
+  { id: 'hiburan', name: 'Hiburan', color: '#a05a8c', budget: 500000 },
+  { id: 'lainnya', name: 'Lainnya', color: '#7a7a7a', budget: 400000 },
+];
+
+// Transactions for November 2026, newest first. Amounts in rupiah.
+export const TRANSACTIONS = [
+  { date: '2026-11-26', desc: 'Belanja mingguan — Pasar Kosambi', category: 'harian', amount: 312000 },
+  { date: '2026-11-25', desc: 'Bensin Pertalite — SPBU Dago', category: 'transport', amount: 150000 },
+  { date: '2026-11-25', desc: 'Makan malam — Warung Sate Shinta', category: 'makan', amount: 186000 },
+  { date: '2026-11-24', desc: 'Les matematika — Budi (anak)', category: 'pendidikan', amount: 400000 },
+  { date: '2026-11-23', desc: 'Listrik PLN — token 200 kWh', category: 'tagihan', amount: 310000 },
+  { date: '2026-11-22', desc: 'Belanja bulanan — Supermarket Griya', category: 'harian', amount: 845000 },
+  { date: '2026-11-21', desc: 'Tiket bioskop — keluarga (4 orang)', category: 'hiburan', amount: 200000 },
+  { date: '2026-11-20', desc: 'Internet rumah — IndiHome', category: 'tagihan', amount: 345000 },
+  { date: '2026-11-19', desc: 'Ojek online — antar jemput sekolah', category: 'transport', amount: 96000 },
+  { date: '2026-11-18', desc: 'Obat flu & vitamin — Apotek K24', category: 'kesehatan', amount: 128000 },
+  { date: '2026-11-17', desc: 'Buku & alat tulis — Toko Buku Togamas', category: 'pendidikan', amount: 215000 },
+  { date: '2026-11-15', desc: 'Belanja mingguan — Pasar Kosambi', category: 'harian', amount: 298000 },
+  { date: '2026-11-14', desc: 'Makan siang — RM Padang Sederhana', category: 'makan', amount: 142000 },
+  { date: '2026-11-12', desc: 'Air PDAM — tagihan Oktober', category: 'tagihan', amount: 187000 },
+  { date: '2026-11-10', desc: 'Servis motor — bengkel AHASS', category: 'transport', amount: 265000 },
+  { date: '2026-11-08', desc: 'Belanja bulanan — Supermarket Griya', category: 'harian', amount: 912000 },
+  { date: '2026-11-05', desc: 'Iuran RT & kebersihan', category: 'lainnya', amount: 75000 },
+  { date: '2026-11-03', desc: 'Langganan streaming — film keluarga', category: 'hiburan', amount: 59000 },
+  { date: '2026-11-02', desc: 'Pulsa & paket data — 2 nomor', category: 'tagihan', amount: 150000 },
+  { date: '2026-11-01', desc: 'SPP sekolah — Budi & Ani', category: 'pendidikan', amount: 900000 },
+];
+
+// Monthly totals for the trend chart (Jun–Nov 2026).
+export const MONTHLY = [
+  { month: 'Jun', income: 13200000, spent: 9480000 },
+  { month: 'Jul', income: 13450000, spent: 10250000 },
+  { month: 'Agu', income: 13100000, spent: 9910000 },
+  { month: 'Sep', income: 13750000, spent: 10420000 },
+  { month: 'Okt', income: 13590000, spent: 9780000 },
+  { month: 'Nov', income: 13592000, spent: 0 }, // Nov spent is computed live below
+];
+
+export const GOALS = [
+  { id: 'darurat', name: 'Dana Darurat', target: 20000000, saved: 12400000, note: 'Target 6x pengeluaran bulanan' },
+  { id: 'liburan', name: 'Liburan Keluarga — Yogyakarta', target: 8000000, saved: 3200000, note: 'Berangkat libur sekolah Juni 2027' },
+  { id: 'rumah', name: 'DP Rumah', target: 150000000, saved: 47500000, note: 'Menabung Rp 2.500.000 per bulan' },
+];
+
+export const TIPS = [
+  { title: 'Belanja harian 12% di bawah anggaran', body: 'Pasar tradisional dua kali seminggu menghemat sekitar Rp 180.000 dibanding belanja harian di minimarket.' },
+  { title: 'Makan di luar melewati separuh anggaran', body: 'Rp 328.000 dari Rp 900.000 sudah terpakai. Satu kali masak di rumah akhir pekan ini menghemat sekitar Rp 120.000.' },
+  { title: 'Tabungan otomatis di awal bulan', body: 'Pindahkan Rp 2.500.000 ke DP Rumah setiap tanggal 2 — sebelum uangnya terpakai untuk hal lain.' },
+];
+
+export function totalIncome() {
+  return INCOME.reduce((sum, item) => sum + item.amount, 0);
+}
+
+export function totalSpent() {
+  return TRANSACTIONS.reduce((sum, t) => sum + t.amount, 0);
+}
+
+export function spentByCategory() {
+  const map = new Map(CATEGORIES.map((c) => [c.id, 0]));
+  for (const t of TRANSACTIONS) map.set(t.category, (map.get(t.category) ?? 0) + t.amount);
+  return CATEGORIES.map((c) => ({ ...c, spent: map.get(c.id) ?? 0 }));
+}
+
+export function formatRupiah(n) {
+  return 'Rp ' + Math.round(n).toLocaleString('id-ID');
+}
+
+export function formatShort(n) {
+  if (n >= 1000000) return 'Rp ' + (n / 1000000).toLocaleString('id-ID', { maximumFractionDigits: 1 }) + ' jt';
+  if (n >= 1000) return 'Rp ' + Math.round(n / 1000) + ' rb';
+  return formatRupiah(n);
+}

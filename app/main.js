@@ -1,31 +1,48 @@
-// A recipe site: the list of recipes and a page for each, on hash routes. The recipes are in data.js, so the site
-// needs no network.
-//
-//   #/                the list
-//   #/recipe/<slug>   one recipe
-//
-// window.__shotReady is false while a page renders and true once it is on screen, so a screenshot script knows when
-// to capture.
+// DompetKeluarga — hash router. Each section is reached by a link; the
+// router swaps the matching view into #view and updates the nav state.
 
-import { recipes } from './data.js';
-import { list, missing, recipe } from './views.js';
+import {
+  renderBudget, renderExpenses, renderGoals, renderOverview, renderPlanner,
+} from './views.js';
 
-const app = document.getElementById('app');
+const ROUTES = [
+  { hash: '#/overview', label: 'Beranda', render: renderOverview },
+  { hash: '#/pengeluaran', label: 'Pengeluaran', render: renderExpenses },
+  { hash: '#/anggaran', label: 'Anggaran', render: renderBudget },
+  { hash: '#/tabungan', label: 'Target Tabungan', render: renderGoals },
+  { hash: '#/perencana', label: 'Perencana', render: renderPlanner },
+];
 
-function render() {
-  window.__shotReady = false;
-  const match = location.hash.match(/^#\/recipe\/([^/?]+)/);
-  if (match) {
-    const found = recipes.find((r) => r.slug === decodeURIComponent(match[1]));
-    document.title = `${found ? found.title : 'Not found'} | Weeknight Kitchen`;
-    app.innerHTML = found ? recipe(found) : missing();
-  } else {
-    document.title = 'Weeknight Kitchen';
-    app.innerHTML = list(recipes);
-  }
-  window.scrollTo(0, 0);
-  window.__shotReady = true;
+const view = document.getElementById('view');
+const nav = document.getElementById('nav');
+
+for (const route of ROUTES) {
+  const link = document.createElement('a');
+  link.href = route.hash;
+  link.textContent = route.label;
+  link.dataset.route = route.hash;
+  nav.appendChild(link);
 }
 
-window.addEventListener('hashchange', render);
-render();
+function currentRoute() {
+  const hash = window.location.hash || '#/overview';
+  return ROUTES.find((r) => r.hash === hash) ?? ROUTES[0];
+}
+
+function route() {
+  const active = currentRoute();
+  if (window.location.hash !== active.hash) {
+    window.history.replaceState(null, '', active.hash);
+  }
+  for (const link of nav.querySelectorAll('a')) {
+    const on = link.dataset.route === active.hash;
+    link.classList.toggle('active', on);
+    if (on) link.setAttribute('aria-current', 'page');
+    else link.removeAttribute('aria-current');
+  }
+  active.render(view);
+  window.scrollTo(0, 0);
+}
+
+window.addEventListener('hashchange', route);
+route();
